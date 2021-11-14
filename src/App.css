@@ -1,11 +1,27 @@
 .App {
   text-align: center;
+  height:100vh;
+  /* background-color:blue; */
+  margin-top: -240px;
+  position: relative;
 }
+
+.App a {margin: 7px;}
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.top{
+  background-color: #475ae2;
+  height: 300px;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
+  /* z-index: -1; */
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -36,3 +52,7 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+

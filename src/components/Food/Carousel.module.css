@@ -1,0 +1,29 @@
+
+
+.container{
+
+    background-color: red;
+   max-width: 576px;
+    max-height: 276px;
+    left: 33%;
+    position: relative;
+    margin-top: 59px;
+    z-index: 10;
+    background-size: cover;
+
+}
+
+.container h4{
+    margin:15px;
+
+  }
+
+  .container img{
+
+    /* height:30px; */
+    background-size: cover;
+  }
+
+  .carousel-inner{
+    max-height: 295px;
+  }

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
-import classes from './Carousel.module.css';
+import classes from '../Food/Carousel.module.css';
 
-class CarouselImages extends React.Component {
+class Sport extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,16 +16,16 @@ class CarouselImages extends React.Component {
   }
 
   componentDidMount() {
-    fetch("./data.json")
+    fetch("https://pixabay.com/api/?key=24336337-28abf76991737630cf9b0b5ea&q=food&image_type=photo&pretty=true")
       .then((res) => res.json())
       .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            items: result,
+            items: result.hits
           });
         },
-      
+
         (error) => {
           this.setState({
             isLoaded: true,
@@ -44,34 +44,35 @@ class CarouselImages extends React.Component {
     } else {
       console.log(items);
 
-   
+
       return (
-        <div className={classes.container}>
-          <Carousel>
+        <div className={classes.container} >
+          <Carousel interval={1000}
+            indicators={false} controls={true}>
             {items.map((item) => (
               <Carousel.Item>
                 <img
                   className="d-block "
-                  src={item.pic_url}
+                  src={item.webformatURL}
                   alt="First slide"
-                  style={{ width: "100px", height: "100px" }}
+                  // style={{ width: "200px", maxHeight: "200px" }}
                 />
 
                 <br></br>
                 <br></br>
-                <Carousel.Caption>  
-                  <h3>{item.title}</h3>
-                  <p>
-                  {item.email}
-                  </p>
+                <Carousel.Caption>
+                
                 </Carousel.Caption>
               </Carousel.Item>
             ))}
           </Carousel>
+         
+
+          <h4>showing food collection</h4>
         </div>
       );
     }
   }
 }
 
-export default CarouselImages;
+export default Sport;
