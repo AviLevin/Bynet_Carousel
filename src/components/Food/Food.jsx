@@ -50,7 +50,7 @@ class Sport extends React.Component {
           <Carousel interval={1000}
             indicators={false} controls={true}>
             {items.map((item) => (
-              <Carousel.Item>
+              <Carousel.Item className={classes.item}>
                 <img
                   className="d-block "
                   src={item.webformatURL}

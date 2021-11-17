@@ -1,29 +1,17 @@
-
-
-.container{
-
-    background-color: red;
-   max-width: 576px;
-    max-height: 276px;
-    left: 33%;
-    position: relative;
-    margin-top: 59px;
-    z-index: 10;
-    background-size: cover;
-
+.container {
+  max-width: 576px;
+  margin-top: 59px;
+  background-size: cover;
 }
 
-.container h4{
-    margin:15px;
+.container h4 {
+  margin: 15px;
+}
 
-  }
+.item {
+  max-height: 295px;
+}
 
-  .container img{
-
-    /* height:30px; */
-    background-size: cover;
-  }
-
-  .carousel-inner{
-    max-height: 295px;
-  }
+.car .item img {
+  margin: 0 auto;
+}

@@ -10,29 +10,37 @@ class App extends Component {
   render() {
     return (
       <>
-      <div className="top"></div>
-        <div className="App">
-          <Router>
+        <Router>
+          <div className="top"></div>
+          <div className="App">
+            <div className="container">
+              <div className="row">
+                <div className="title">
+                  {" "}
+                  <h1>OUR GALLERY </h1>
+                  <Link to="/sport">
+                    <button type="button" class="btn btn-primary">
+                      Sport
+                    </button>
+                  </Link>
+                  <Link to="/food">
+                    <button type="button" class="btn btn-primary">
+                      Food
+                    </button>
+                  </Link>
+                </div>
+              </div>
 
-            <h1>OUR GALLERY </h1>
-            <Link to="/sport">
-              <button type="button" class="btn btn-primary">
-                Sport
-              </button>
-            </Link>
-            <Link to="/food">
-              <button type="button" class="btn btn-primary">
-                Food
-              </button>
-            </Link>
+              <div className="elements">
+                <Routes>
+                  <Route exact path="/sport" element={<Sport />}></Route>
 
-            <Routes>
-              <Route exact path="/sport" element={<Sport />}></Route>
-
-              <Route path="/Food" element={<Food />}></Route>
-            </Routes>
-          </Router>
-        </div>
+                  <Route path="/Food" element={<Food />}></Route>
+                </Routes>
+              </div>
+            </div>
+          </div>
+        </Router>
       </>
     );
   }
