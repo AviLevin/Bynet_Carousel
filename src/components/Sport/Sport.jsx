@@ -47,6 +47,17 @@ class Sport extends React.Component {
 
       return (
         <div className={classes.container} >
+
+          <style type="text/css">
+            {`
+    .carousel-inner {
+      background-color: purple;
+      border-radius: 20px;
+    }
+
+  
+    `}
+          </style>
           <Carousel interval={1000}
             indicators={false} controls={true}>
             {items.map((item) => (
@@ -55,18 +66,18 @@ class Sport extends React.Component {
                   className="d-block "
                   src={item.webformatURL}
                   alt="First slide"
-                  // style={{ width: "200px", maxHeight: "200px" }}
+                // style={{ width: "200px", maxHeight: "200px" }}
                 />
 
                 <br></br>
                 <br></br>
                 <Carousel.Caption>
-                
+
                 </Carousel.Caption>
               </Carousel.Item>
             ))}
           </Carousel>
-         
+
 
           <h4>showing sport collection</h4>
         </div>

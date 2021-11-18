@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, NavLink } from "react-router-dom";
 
 import Food from "./components/Food/Food";
 import Sport from "./components/Sport/Sport";
 
 import "./App.css";
+import "./index.css";
 
 class App extends Component {
   render() {
@@ -18,22 +19,22 @@ class App extends Component {
                 <div className="title">
                   {" "}
                   <h1>OUR GALLERY </h1>
-                  <Link to="/sport">
-                    <button type="button" class="btn btn-primary">
+                  <NavLink  to="/">
+                    <button exact activeClassName="active" type="button"   className="btn btn-primary">
                       Sport
                     </button>
-                  </Link>
-                  <Link to="/food">
-                    <button type="button" class="btn btn-primary">
+                  </NavLink>
+                  <NavLink  activeClassName="active" to="/food">
+                    <button type="button" className="btn btn-primary">
                       Food
                     </button>
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
 
               <div className="elements">
                 <Routes>
-                  <Route exact path="/sport" element={<Sport />}></Route>
+                  <Route exact path="/" element={<Sport />}></Route>
 
                   <Route path="/Food" element={<Food />}></Route>
                 </Routes>

@@ -47,8 +47,20 @@ class Sport extends React.Component {
 
       return (
         <div className={classes.container} >
+
+<style type="text/css">
+    {`
+    .carousel-inner {
+      background-color: purple;
+      border-radius: 20px;
+    }
+
+  
+    `}
+  </style>
+
           <Carousel interval={1000}
-            indicators={false} controls={true}>
+            indicators={false} controls={true} className={classes.car}>
             {items.map((item) => (
               <Carousel.Item className={classes.item}>
                 <img

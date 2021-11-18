@@ -8,9 +8,20 @@
   margin: 15px;
 }
 
+.car{
+  border-radius: 20px;
+}
+
 .item {
   max-height: 295px;
 }
+/* 
+.item img{
+border-radius: 20px;
+} */
+
+
+
 
 .car .item img {
   margin: 0 auto;

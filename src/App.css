@@ -9,9 +9,19 @@
   display: flex;
   justify-content: center;
 }
-.title{
-  margin-top:30px;
+.title {
+  margin-top: 32px;
 }
+
+ 
+.active  {
+  background-color:red;
+}
+
+.btn-primary:active{
+  background-color:red;
+}
+
 .App a {
   margin: 7px;
 }
@@ -56,4 +66,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.btn-primary {
+  background-color: #475ae2 !important;
+  border: 2px solid white !important;
+  border-radius: 20px !important;
+  width: 89px;
+  
+}
+
+
+
+
+.btn-primary:hover {
+  background-color: #78787c !important;
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@900&display=swap');
+
+.App h1{
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
