@@ -19,16 +19,21 @@ class App extends Component {
                 <div className="title">
                   {" "}
                   <h1>OUR GALLERY </h1>
+
+            
                   <NavLink  to="/">
-                    <button exact activeClassName="active" type="button"   className="btn btn-primary">
+                    <button  exact activeClassName="active" type="button"   className="btn btn-primary">
                       Sport
                     </button>
                   </NavLink>
-                  <NavLink  activeClassName="active" to="/food">
-                    <button type="button" className="btn btn-primary">
+                  
+                  <NavLink   to="/food">
+                    <button activeClassName="active" type="button" className="btn btn-primary">
                       Food
                     </button>
                   </NavLink>
+
+
                 </div>
               </div>
 

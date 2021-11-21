@@ -53,6 +53,7 @@ class Sport extends React.Component {
     .carousel-inner {
       background-color: purple;
       border-radius: 20px;
+      border-style: groove;
     }
 
   

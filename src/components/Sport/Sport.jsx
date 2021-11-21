@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import classes from '../Food/Carousel.module.css';
+import SearchBox from "../SearchBox";
 
 class Sport extends React.Component {
   constructor(props) {
@@ -12,11 +13,13 @@ class Sport extends React.Component {
       items: [],
       current: 1,
       isNext: true,
+      searchValue:''
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
-    fetch("https://pixabay.com/api/?key=24336337-28abf76991737630cf9b0b5ea&q=sport&image_type=photo&pretty=true")
+    fetch(`https://pixabay.com/api/?key=24336337-28abf76991737630cf9b0b5ea&q=${this.state.searchValue}&image_type=photo&pretty=true`)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -35,6 +38,13 @@ class Sport extends React.Component {
       );
   }
 
+  handleChange(event) {
+    this.setState({searchValue: event.target.value});
+    console.log(event.target.value);
+    console.log('stateIS',this.state.searchValue);
+    
+  }
+
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) {
@@ -48,11 +58,14 @@ class Sport extends React.Component {
       return (
         <div className={classes.container} >
 
+          <SearchBox searchValue={this.state.searchValue}  onChange={this.handleChange} ></SearchBox>
+<br></br>
           <style type="text/css">
             {`
     .carousel-inner {
       background-color: purple;
       border-radius: 20px;
+      border-style: groove;
     }
 
   
