@@ -58,7 +58,7 @@ class Sport extends React.Component {
       return (
         <div className={classes.container} >
 
-          <SearchBox searchValue={this.state.searchValue}  onChange={this.handleChange} ></SearchBox>
+          {/* <SearchBox searchValue={this.state.searchValue}  onChange={this.handleChange} ></SearchBox> */}
 <br></br>
           <style type="text/css">
             {`

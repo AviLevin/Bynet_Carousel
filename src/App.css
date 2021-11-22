@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   height: 100vh;
-  margin-top: -240px;
+  margin-top: -320px;
   position: relative;
 }
 
@@ -9,9 +9,9 @@
   display: flex;
   justify-content: center;
 }
-.title {
+/* .title {
   margin-top: 32px;
-}
+} */
 
 
 
